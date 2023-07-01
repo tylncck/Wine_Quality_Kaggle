@@ -11,3 +11,5 @@ The original dataset comes with 27 columns (22 decimals, 2 integers and 3 id col
 
 ## Model Training
 We tried different classification models with hyperparameter tuning. During the parameter tuning, we generated our own scorer (namely Quadratic Weighted Kappa) to decide on the best parameters. 
+
+The best model appears to be XGBoost and we suppose due to huge number of new features generated, model overfits in the training dataset. However, our scorer on own test dataset returned QWK very close to 0.5. Therefore, we stopped searching for further development for the model. The result is not ideal for us but it's better to know where to stop because there is no room for the model to improve further as it has Accuracy = 1 and QWK = 1.
